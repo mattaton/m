@@ -10,7 +10,7 @@
 <body>
 	<nav>
     	<div class="nav-wrapper">
-      		<a  class=" brand-logo center">Registration Page</a>
+      		<a class=" brand-logo center">Registration Page</a>
       		<ul id="nav-mobile" class="left hide-on-med-and-down">
         		<li><a href="StartPage.html">Home</a></li>
     	</div>

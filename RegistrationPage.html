@@ -8,14 +8,19 @@
 	<title>Pseudo-Registration Page</title>
 </head>
 <body>
+	<!--Navbar -->
 	<nav>
     	<div class="nav-wrapper">
       		<a class=" brand-logo center">Registration Page</a>
+      		<ul id="nav-mobile" class="left hide-on-med-and-down">
+        		<li><a href="StartPage.html">Home</a></li>
     	</div>
   	</nav>
-
+  	<!--Forms-->
 	<form action="RegistrationPage.php" method = "post">
+	<p>
 		<div class="row">
+			<!--Name-->
         			<div class="input-field col s6">
           				<input placeholder="Last Name, Given Name, Middle Name" name="name" type="text">
           				<label class="active" for="name">Name</label>
@@ -25,7 +30,7 @@
 					<input type="date" name="birthdate">
 					<label class="active" for="birthdate">Birthdate</label><br><br>
 					</div>
-
+			<!--Gender-->		
 					Gender:
 					<p>
       					<input class="with-gap" name="gender" type="radio" value="Male" id="gender1" checked/>
@@ -44,7 +49,7 @@
 						<input placeholder="Nationality" name="nationality" type="text"><br><br>
 						<label class="active" for="nationality">Nationality</label>
 					</div>
-
+			<!--Civil Status-->			
 					Civil Status:
 					<p>
       					<input class="with-gap" name="status" type="radio" value="Single" id="status1" checked/>
@@ -54,36 +59,36 @@
       					<input class="with-gap" name="status" type="radio" value="Married" id="status2" />
       					<label for="status2">Married</label>
     				</p><br><br>
-
+    		<!--Religion-->			
     				<div class="input-field col s6">
 						<input placeholder="Religion" type="text" name="religion"><br><br>
 						<label class="active" for="religion">Religion</label>
 					</div>
-
+			<!--Address-->
 					<div class="input-field col s6">
 						<input placeholder="Address" type="text" name="address"><br><br>
 						<label class="active" for="address">Address</label>
 					</div>
-
+			<!--Telephone-->
 					<div class="input-field col s6">
 						<input placeholder="Telephone No." type="number" name="telephone"><br><br>
 						<label class="active" for="address">Telephone No.</label>
 					</div>
-
+			<!--E-mail-->
 					<div class="input-field col s6">
 						<input placeholder="E-Mail" type="email" name="email"><br><br>
 						<label class="active" for="email">E-Mail</label>
 					</div>
-
+			<!--Education-->
 					<div class="input-field col s6">
 						<input placeholder="Highest Educational Attainment" type="text" name="education">
 						<label class="active" for="education">Educational Attainment</label>
 					</div>
 		</div>
+	</p>
+			<!--Submit Button-->
 		<input class="amber darken-1 btn waves-effect" type="submit" name="submit" value="Submit">
 	</form>
-
-
 	
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
