@@ -5,6 +5,9 @@
         <meta charset="utf-8">
     </head>
     <style>
+		p {
+    font-size: 27px;
+		}
     .button {
       background-color: #f4dc42;
       border: none;
@@ -28,13 +31,12 @@
     <body>
       <center>
         <form  method="post">
-        Number of Rows:
+        <p>Pascal's Triangle</p>
         <input class="text" placeholder="Enter Numbers 1-12..." type="text" name="rows">
         <input class="button" type="submit" value="Display" name="submit">
       </form><br/>
 
 <?php
-
   function displayPascalTriangle(){
         $rows = $_POST['rows'];
         $length = $rows;
@@ -58,14 +60,14 @@
         if ($rows > 12) {
           echo '<h1>Numbers 1-12 Only.</h1>';
         }
-
+				if ($rows <=0) {
+					echo '<h1>Numbers 1-12 Only.</h1>';
+				}
       }
       if(array_key_exists('submit',$_POST)){
   		displayPascalTriangle();
   		}
-
-	?>
-
+?>
         </table>
       </center>
     </body>
