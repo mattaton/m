@@ -54,7 +54,7 @@
 				
         <input class="button" type="submit" value="Update Record" name="update">
 				</form>
-				<form method="post" action="PhpMyAdmin.php">
+				<form method="post" action="index.php">
 				<input class="button" type="submit" value="Back" name="back">
 				
       </form><br/>
