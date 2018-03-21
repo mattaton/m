@@ -75,19 +75,19 @@
 		echo "<table style=\"border: 1px solid black;\">";
 		echo"<tr>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "Student Number";
+			echo "<center> Student Number </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "Last Name";
+			echo "<center> Last Name </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "First Name";
+			echo "<center> First Name </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "program";
+			echo "<center> Program </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "actions";
+			echo "<center> Actions </center>";
 			echo "</td>";
 		echo"</tr>";
 		
@@ -128,29 +128,44 @@
 		echo "<table style=\"border: 1px solid black;\">";
 		echo"<tr>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "Student Number";
+			echo "<center> Student Number </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "Last Name";
+			echo "<center> Last Name </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "First Name";
+			echo "<center> First Name </center>";
 			echo "</td>";
 			echo "<td style=\"border: 1px solid black;\">";
-			echo "program";
+			echo "<center> Program </center>";
+			echo "<td style=\"border: 1px solid black;\">";
+			echo "<center> Actions </center>";
 			echo "</td>";
 		echo"</tr>";
 		
+		
+		
 		while($data = mysqli_fetch_array($res, MYSQLI_ASSOC)){
 			echo"<tr>";
+			global $id;
+			$id = $data['StudentNumber'];
 			foreach($data AS $val){
 				echo "<td style=\"border: 1px solid black;\">";
 				echo $val;
 				echo "</td>";
 			}
+			echo "<form method=\"post\" action=\"edit.php\">";
+			echo "<td style=\"border: 1px solid black;\">";
+			echo "<input type=\"hidden\" name=\"id\" value=\"$id\">";
+			echo "<input class=\"button\" type=\"submit\" name=\"Edit\" value=\"Edit\">";
+			echo "</form>";
+			echo "<form method =\"post\">";
+			echo "<input type=\"hidden\" name=\"id\" value=\"$id\">";
+			echo "<input class=\"button\" type=\"submit\" name=\"Delete\" value=\"Delete\">";
+			echo "</td>";
+			echo "</form>";
 			echo "</tr>";
 		}
-		echo "</table>";
 	}
 	if(array_key_exists('search', $_POST)){
 		searchRecords();
